@@ -7,7 +7,7 @@ unsigned int v, N, n;
 do
 {printf("Enter variant (1 or 2):");
 scanf("%u", &v); 
-  if (v!=1 && v!=2) {printf("Are you understand English language?\n");} //вибір неправильного варіанту
+  if (v!=1 && v!=2) {printf("Are you understand English language?\n");} 
   } while (v!=1 && v!=2);
 
 printf("Enter x1:");
@@ -15,23 +15,23 @@ scanf("%lf", &x1);
 
 printf("Enter x2:");
    
-    scanf("%lf", &x2);  //ввід мінімального та максимального значення х
+    scanf("%lf", &x2);  
 
 if (x1!=x2){
 
-switch (v) //вибір варіанту
+switch (v) 
 
 
-{ case 1: v=1; //вибір 1-го варіанту
+{ case 1: v=1; 
 printf("Enter N:");
     scanf("%uf", &N);
-    delta=(x2-x1)/N; //обрахунок зміни функції 
+    delta=(x2-x1)/N;  
 
 printf("x1=%lf\n", x1); printf("x2=%lf\n", x2); printf("delta=%lf\n", delta); printf("N=%u\n", N);
 
 printf("+---------N+---------x1+-----y(x)+\n");
     for ( n = 0; n <=N; n++ ) { int y=x1+delta*n; y<=x2; 
-    //заголовок і початок побудови таблиці
+    
     printf("+----------+----------+----------+\n");   
     printf("|         ");  printf ("%d", n);  if (y>9) { printf("+        ");} 
     else {printf("+         ");} 
@@ -40,40 +40,40 @@ printf("+---------N+---------x1+-----y(x)+\n");
     else {printf("+         ");} 
     printf("%d", y);  printf("|\n");  
     printf("+----------+----------+----------+\n");   
-      getchar();  //пауза до натискання кнопки
+      getchar(); 
     }
 break;
 
-case 2: v=2; //вибір 2-го варіанту
+case 2: v=2; 
 printf("Enter delta:");
-    scanf("%lf", &delta); //ввід різниці функції
+    scanf("%lf", &delta); 
     N=(x2-x1)/delta;
     
     printf("x1=%lf\n", x1); printf("x2=%lf\n", x2); printf("delta=%lf\n", delta); printf("N=%u\n", N);
     
     if ((x2-x1)>0){
-    if ((x2-x1)<N) {N=1; printf("building of tablica is impossible, program changed N to 1\n");} } //це я намагався прибрати дробові N
+    if ((x2-x1)<N) {N=1; printf("building of tablica is impossible, program changed N to 1\n");} } 
     
     if ((x2-x1)<0)
-    { if ((x1-x2)<N) {N=1; printf("building of tablica is impossible, program changed N to 1\n");} } //це я намагався прибрати дробові N
+    { if ((x1-x2)<N) {N=1; printf("building of tablica is impossible, program changed N to 1\n");} } 
     printf("+---------N+---------X1+-----y(x)+\n");
     for ( n = 0; n <=N; n++ ) { int y=x1+delta*n; y<=x2;
-         //заголовок і початок побудови таблиці
+         
     printf("+----------+----------+----------+\n");   
     printf("|         ");  printf ("%d", n); 
-    if (y>9) //це я прибрав зсув таблиці при двозначних х та у
-    { printf("+        ");} //для гарного вигляду
+    if (y>9) 
+    { printf("+        ");} 
     else {printf("+         ");} 
     
     printf("%d", y);  
-    if (y>9) { printf("+        ");} //у мене х=у, тому це також прибирає зсув
+    if (y>9) { printf("+        ");} 
     else {printf("+         ");} 
     printf("%d", y);  printf("|\n");  
     printf("+----------+----------+----------+\n");   
-      getchar();  //пауза до натискання кнопки
+      getchar();  
     }
-break; //зупинка алгоритму
-default: printf("Ви жартуєте?");} //вивід у випадку вибору некоректного варіанту
+break; 
+default: printf("Ви жартуєте?");} 
 } 
-else {printf("N=0, delta=0, building of tablica is imposible");} //вивід у випадку х1=х2
+else {printf("N=0, delta=0, building of tablica is imposible");}
 }
