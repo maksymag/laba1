@@ -29,8 +29,9 @@ printf("Enter N:");
 
 printf("x1=%lf\n", x1); printf("x2=%lf\n", x2); printf("delta=%lf\n", delta); printf("N=%u\n", N);
 
-    for ( n = 0; n < N; n++ ) { int y=x1+delta*n; y<=x2; 
-    printf("+---------N+---------x1+-----y(x)+\n");    //заголовок і початок побудови таблиці
+printf("+---------N+---------x1+-----y(x)+\n");
+    for ( n = 0; n <=N; n++ ) { int y=x1+delta*n; y<=x2; 
+    //заголовок і початок побудови таблиці
     printf("+----------+----------+----------+\n");   
     printf("|         ");  printf ("%d", n);  if (y>9) { printf("+        ");} 
     else {printf("+         ");} 
@@ -55,9 +56,9 @@ printf("Enter delta:");
     
     if ((x2-x1)<0)
     { if ((x1-x2)<N) {N=1; printf("building of tablica is impossible, program changed N to 1\n");} } //це я намагався прибрати дробові N
-    
-    for ( n = 0; n < N; n++ ) { int y=x1+delta*n; y<=x2;
-    printf("+---------N+---------X1+-----y(x)+\n");     //заголовок і початок побудови таблиці
+    printf("+---------N+---------X1+-----y(x)+\n");
+    for ( n = 0; n <=N; n++ ) { int y=x1+delta*n; y<=x2;
+         //заголовок і початок побудови таблиці
     printf("+----------+----------+----------+\n");   
     printf("|         ");  printf ("%d", n); 
     if (y>9) //це я прибрав зсув таблиці при двозначних х та у
