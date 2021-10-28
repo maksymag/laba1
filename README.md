@@ -76,4 +76,3 @@ default: printf("Ви жартуєте?");} //вивід у випадку ви�
 } 
 else {printf("N=0, delta=0, building of tablica is imposible");} //вивід у випадку х1=х2
 }
-
